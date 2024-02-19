@@ -6,7 +6,7 @@ import Square from "./Square";
 import EnterField from "./EnterField"
 import { useState } from 'react';
 
-export default function homepage() {
+export default function pages() {
   const [value, setValue] = useState('10');
 
   return (<>    
