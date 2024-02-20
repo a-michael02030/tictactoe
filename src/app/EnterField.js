@@ -1,8 +1,8 @@
 "use client";
-import { useState } from 'react';
+import { useState, Component, React } from 'react';
 
-export default function EnterField(message) {
-const [value , setValue] = useState({message});
+export default function EnterField({message,enterFieldValue}) {
+const [value , setValue] = useState(message);
 function handleOnClick(value) {
   setValue(value)
 }
@@ -11,8 +11,8 @@ return (
       <input
          type="text"
          value={value}
-         placeholder={message.value}
-         onClick={(e) => { setValue(e.target.value)}}
+         placeholder={message}
+         onClick={(e) => { enterFieldValue(e.target.value)}}
          onChange={(e) => {setValue(e.target.value)}}
        />
 </div>
