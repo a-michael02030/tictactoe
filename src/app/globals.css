@@ -105,3 +105,13 @@ a {
     color-scheme: dark;
   }
 }
+
+.Column{
+  display: flex;
+  flex-direction: 'row';
+}
+.Row{
+  display: flex;
+  flex-direction: 'row';
+}
+

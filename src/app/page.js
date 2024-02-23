@@ -29,10 +29,12 @@ export default function Home() {
     console.log(startDate);
     console.log(endDate);
     setValues({...values,"startDate":startDate, "endDate":endDate});
+    var monthDiff = (endDate.getFullYear() - startDate.getFullYear())*12 - startDate.getMonth() + endDate.getMonth() + 1;
+    enterFieldValue(monthDiff);
   }
   return (<>
   <DatePickerComponent returnRange={returnDate}/>
-  <div>{values.startDate}</div>
+  <div>{values.startDate==null ? "Object is null": values.startDate.getMonth()}</div>
   <div>
     {
       values.calendarArray.map((day)=>{
@@ -41,9 +43,6 @@ export default function Home() {
         )
       })
     }
-  </div>
-  <div className="board-row">
-  <Square />
   </div>
   </>
   );
