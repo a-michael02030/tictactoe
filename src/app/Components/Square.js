@@ -1,4 +1,5 @@
 import {useState, Component, React } from 'react';
+import '../page.module.css'
 export default function Square({value})  {
     const initialValues = {
         availableValues:["1","2"],
@@ -9,11 +10,11 @@ export default function Square({value})  {
     }
     const [values,setValues] = useState(initialValues)
     return (<>
-    <div className="Column">
-        <button className="Column" onClick={onClick}>{values.availableValues[values.start]}</button>
-        <button className="Column" onClick={onClick}>{values.availableValues[values.start]}</button>
-        <button className="Column" onClick={onClick}>{values.availableValues[values.start]}</button>
-        <button className="Column" onClick={onClick}>{values.availableValues[values.start]}</button>
+    <div >
+        <button className='Column' style={{ backgroundColor: 'red' }} onClick={onClick}>{values.availableValues[values.start]}</button>
+        <button className='Column' onClick={onClick}>{values.availableValues[values.start]}</button>
+        <button  onClick={onClick}>{values.availableValues[values.start]}</button>
+        <button  onClick={onClick}>{values.availableValues[values.start]}</button>
     </div>
     
     </>);

@@ -32,14 +32,18 @@ export default function Home() {
     var monthDiff = (endDate.getFullYear() - startDate.getFullYear())*12 - startDate.getMonth() + endDate.getMonth() + 1;
     enterFieldValue(monthDiff);
   }
+  const clearCalendar = () =>{
+    setValues({...values,"calendarArray":[],"startDate":null, "endDate":null})
+  }
   return (<>
   <DatePickerComponent returnRange={returnDate}/>
+  <button onClick={clearCalendar}>clear</button>
   <div>{values.startDate==null ? "Object is null": values.startDate.getMonth()}</div>
   <div>
     {
       values.calendarArray.map((day)=>{
         return (
-          <Square value= {day.value} />
+          <Square className={styles.Column} value= {day.value} />
         )
       })
     }
