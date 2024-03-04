@@ -3,6 +3,7 @@ import { useState, Component, React} from 'react';
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css';
 import { Button} from 'react-bootstrap';
+import styles from '../page.module.css'
 
 export default function DatePickerComponent({returnRange}) {
     const [date, setDate] = useState(new Date());
@@ -16,7 +17,7 @@ export default function DatePickerComponent({returnRange}) {
     };
   
     return (
-      <div>
+      <div className={styles.Button}>
         <DatePicker selected={date} onChange={handleChange}
         startDate={startDate}
         endDate={endDate}

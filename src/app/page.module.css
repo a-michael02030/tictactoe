@@ -1,14 +1,35 @@
-.Column{
-  display: flex;
-  flex-direction: 'column';
-  background-color: blue;
-  color: rgb(55, 55, 135);
-  width: 100px;
-  height:200px
+.Day{
+  background-color: skyblue;
+  border-style: solid;
+  width: 25px;
+  height:25px
 }
-.Row{
-  display: flex;
-  flex-direction: 'row';
+.Month{
+  display:flex;
+  background-color: beige;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0px;
 }
-.button {background-color: #04AA6D;}
+
+.space_between{
+  display:flex;
+  background-color: green;
+  align-content: space-between;
+
+}
+
+.Page {
+  display:flex;
+  justify-content: center;
+  background-color: aliceblue;
+  flex-direction: row;
+}
+
+.Button {
+  display:flex;
+  justify-content: center;
+}
 

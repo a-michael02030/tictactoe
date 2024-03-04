@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import styles from "./page.module.css";
-import Square from "./Components/Square";
+import styles from './page.module.css';
+import Day from "./Components/Day";
 import EnterField from "./Components/EnterField"
 import {useState, Component, React } from 'react';
 import DatePickerComponent from "./Components/DatePicker";
+import Month from "./Components/Month";
 
 export default function Home() {
   const initialValues = {
@@ -37,13 +38,14 @@ export default function Home() {
   }
   return (<>
   <DatePickerComponent returnRange={returnDate}/>
-  <button onClick={clearCalendar}>clear</button>
-  <div>{values.startDate==null ? "Object is null": values.startDate.getMonth()}</div>
-  <div>
+  <div className={styles.Button}>
+  <button  onClick={clearCalendar}>clear</button>
+  </div>
+  <div  className={styles.Page}>
     {
       values.calendarArray.map((day)=>{
         return (
-          <Square className={styles.Column} value= {day.value} />
+          <Month monthName="Test" />
         )
       })
     }
