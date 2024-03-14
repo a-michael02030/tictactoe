@@ -14,13 +14,6 @@
   padding: 0px;
 }
 
-.space_between{
-  display:flex;
-  background-color: green;
-  align-content: space-between;
-
-}
-
 .Page {
   display:flex;
   justify-content: center;

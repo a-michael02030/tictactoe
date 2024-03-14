@@ -7,6 +7,7 @@ import EnterField from "./Components/EnterField"
 import {useState, Component, React } from 'react';
 import DatePickerComponent from "./Components/DatePicker";
 import Month from "./Components/Month";
+import NavBar from "./Components/NavBar";
 
 export default function Home() {
   const initialValues = {
@@ -37,6 +38,7 @@ export default function Home() {
     setValues({...values,"calendarArray":[],"startDate":null, "endDate":null})
   }
   return (<>
+  <NavBar/>
   <DatePickerComponent returnRange={returnDate}/>
   <div className={styles.Button}>
   <button  onClick={clearCalendar}>clear</button>
